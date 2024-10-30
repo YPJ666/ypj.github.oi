@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电子行驶证查询</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: black;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            box-sizing: border-box;
+            /* 使padding包含在宽度内 */
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>电子行驶证查询</h1>
+
+        <!-- 录入信息表单 -->
+        <div class="form-group">
+            <label for="idType">证件类型:</label>
+            <select id="idType" disabled>
+                <option value="居民身份证">居民身份证</option>
+                <!-- 可以添加其他类型的选项 -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="idNumber">身份证号:</label>
+            <input type="text" id="idNumber" placeholder="请输入身份证号">
+        </div>
+        <div class="form-group">
+            <label for="phoneCode">手机号码:</label>
+            <input type="text" id="phoneCode" placeholder="请输入手机号码">
+        </div>
+
+        <!-- 下一步按钮 -->
+        <button onclick="showImage()">下一步</button>
+    </div>
+
+    <script>
+        function showImage() {
+            // 这里应该有一个函数来处理验证逻辑，
+            // 但为了演示目的，我们简单地打开一个新的窗口显示图片
+
+            // 打开新窗口并加载图片
+            window.open('image-page.html', '_blank');
+        }
+    </script>
+
+</body>
+
+</html>
